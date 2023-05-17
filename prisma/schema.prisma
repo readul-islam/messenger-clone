@@ -25,6 +25,7 @@ model User {
   seenMessage     Message[]      @relation("Seen", fields: [seenMessageIds], references: [id])
   accoutn         Account[]
   messages        Message[]
+ @@unique([email])
 }
 
 model Account {
